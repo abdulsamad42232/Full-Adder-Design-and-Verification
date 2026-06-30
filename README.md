@@ -76,7 +76,7 @@ The testbench utilizes `$monitor` to automatically generate the following truth 
 ========================================
 Time	A B Cin | Sum Cout
 ========================================
-0ns	0 0  0  |  0   0
+0ns 	0 0  0  |  0   0
 10ns	0 0  1  |  1   0
 20ns	0 1  0  |  1   0
 30ns	0 1  1  |  0   1
