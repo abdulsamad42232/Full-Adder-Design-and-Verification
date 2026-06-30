@@ -10,66 +10,11 @@ This repository contains the RTL design and verification of a 1-Bit Full Adder i
 
 ## 📁 Repository Structure
 
-
+```text
 Full-Adder-Verilog/
 ├── rtl/                        # Synthesizable Verilog Source Code
 │   └── full_adder.v            # Dataflow implementation (assign)
 ├── tb/                         # Automated Verification Testbench
 │   └── tb_full_adder.v         # Exhaustive 8-state testbench
 └── docs/                       # Verification outputs and waveforms
-    └── full_adder_wave.png     
-🚀 How to Run the Simulation
-To run this project locally, you will need ModelSim installed and added to your system's environment variables.
-
-Clone the repository and open it in VS Code:
-
-Bash
-git clone https://github.com/abdulsamad42232/Full-Adder-Design-and-Verification.git
-cd Full-Adder-Verilog
-Open the VS Code Terminal (Ctrl + ~) and compile the design:
-
-Bash
-# Create the logical working library
-vlib work
-
-# Compile both the hardware design and the testbench
-vlog rtl/full_adder.v tb/tb_full_adder.v
-Launch the Simulation:
-
-Bash
-# Start ModelSim targeting the testbench
-vsim work.tb_full_adder
-View the Waveforms (Inside ModelSim):
-Once the ModelSim GUI opens, type the following in its command line to see the visual timing diagram:
-
-Bash
-add wave *
-run -all
-(Press the F key on your keyboard while clicking the wave window to auto-fit the zoom!)
-
-💻 Console Output: Automated Truth Table
-The testbench utilizes $monitor to automatically generate the following truth table in the simulation console, proving correct arithmetic logic:
-
-Plaintext
-========================================
-Time	A B Cin | Sum Cout
-========================================
-0ns	    0 0  0  |  0   0
-10ns	0 0  1  |  1   0
-20ns	0 1  0  |  1   0
-30ns	0 1  1  |  0   1
-40ns	1 0  0  |  1   0
-50ns	1 0  1  |  0   1
-60ns	1 1  0  |  0   1
-70ns	1 1  1  |  1   1
-========================================
-Full Adder Simulation Complete.
-📊 Waveform Verification
-🛠️ Tools & Technologies Used
-Hardware Description Language: Verilog
-
-Simulation Engine: Mentor Graphics ModelSim
-
-Development Environment: Visual Studio Code
-
-Developed by Abdul Samad Khan
+    └── full_adder_wave.png
