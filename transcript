@@ -1,0 +1,24 @@
+# vsim work.tb_full_adder 
+# Start time: 14:54:52 on Jun 30,2026
+# Loading work.tb_full_adder
+# Loading work.full_adder
+add wave *
+run -all
+# ========================================
+# Time	A B Cin | Sum Cout
+# ========================================
+# 0ns	0 0  0  |  0   0
+# 10000ns	0 0  1  |  1   0
+# 20000ns	0 1  0  |  1   0
+# 30000ns	0 1  1  |  0   1
+# 40000ns	1 0  0  |  1   0
+# 50000ns	1 0  1  |  0   1
+# 60000ns	1 1  0  |  0   1
+# 70000ns	1 1  1  |  1   1
+# ========================================
+# Full Adder Simulation Complete.
+# ** Note: $stop    : tb/tb_full_adder.v(45)
+#    Time: 80 ns  Iteration: 0  Instance: /tb_full_adder
+# Break in Module tb_full_adder at tb/tb_full_adder.v line 45
+# End time: 15:19:05 on Jun 30,2026, Elapsed time: 0:24:13
+# Errors: 0, Warnings: 0
