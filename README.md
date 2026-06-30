@@ -1,23 +1,57 @@
-1-Bit Full Adder Design and Verification📌 Project OverviewThis repository contains the RTL design and verification of a 1-Bit Full Adder implemented using Dataflow modeling in Verilog. The project features an exhaustive testbench that validates all 8 possible input combinations to ensure 100% functional accuracy.📁 Repository StructureFull-Adder-Verilog/
+# 1-Bit Full Adder Design and Verification
+
+[![Hardware: Verilog](https://img.shields.io/badge/Hardware-Verilog-blue.svg)](#)
+[![Simulation: ModelSim](https://img.shields.io/badge/Simulation-ModelSim-green.svg)](#)
+
+## 📌 Project Overview
+This repository contains the RTL design and verification of a 1-Bit Full Adder implemented using Dataflow modeling in Verilog. The project features an exhaustive testbench that validates all 8 possible input combinations to ensure 100% functional accuracy.
+
+---
+
+## 📁 Repository Structure
+
+
+Full-Adder-Verilog/
 ├── rtl/                        # Synthesizable Verilog Source Code
 │   └── full_adder.v            # Dataflow implementation (assign)
 ├── tb/                         # Automated Verification Testbench
 │   └── tb_full_adder.v         # Exhaustive 8-state testbench
 └── docs/                       # Verification outputs and waveforms
     └── full_adder_wave.png     
-🚀 How to Run the SimulationTo run this project locally, you will need ModelSim installed and added to your system's environment variables.Clone the repository and open it in VS Code:git clone [https://github.com/YOUR_USERNAME/Full-Adder-Verilog.git](https://github.com/YOUR_USERNAME/Full-Adder-Verilog.git)
+🚀 How to Run the Simulation
+To run this project locally, you will need ModelSim installed and added to your system's environment variables.
+
+Clone the repository and open it in VS Code:
+
+Bash
+git clone https://github.com/abdulsamad42232/Full-Adder-Design-and-Verification.git
 cd Full-Adder-Verilog
-Open the VS Code Terminal (Ctrl + ~) and compile the design:# Create the logical working library
+Open the VS Code Terminal (Ctrl + ~) and compile the design:
+
+Bash
+# Create the logical working library
 vlib work
 
 # Compile both the hardware design and the testbench
 vlog rtl/full_adder.v tb/tb_full_adder.v
-Launch the Simulation:# Start ModelSim targeting the testbench
+Launch the Simulation:
+
+Bash
+# Start ModelSim targeting the testbench
 vsim work.tb_full_adder
 View the Waveforms (Inside ModelSim):
-Once the ModelSim GUI opens, type the following in its command line to see the visual timing diagram:add wave *
+Once the ModelSim GUI opens, type the following in its command line to see the visual timing diagram:
+
+Bash
+add wave *
 run -all
-(Press the F key on your keyboard while clicking the wave window to auto-fit the zoom!)💻 Console Output: Automated Truth TableThe testbench utilizes $monitor to automatically generate the following truth table in the simulation console, proving correct arithmetic logic:========================================
+(Press the F key on your keyboard while clicking the wave window to auto-fit the zoom!)
+
+💻 Console Output: Automated Truth Table
+The testbench utilizes $monitor to automatically generate the following truth table in the simulation console, proving correct arithmetic logic:
+
+Plaintext
+========================================
 Time	A B Cin | Sum Cout
 ========================================
 0ns	    0 0  0  |  0   0
@@ -30,4 +64,12 @@ Time	A B Cin | Sum Cout
 70ns	1 1  1  |  1   1
 ========================================
 Full Adder Simulation Complete.
-📊 Waveform Verification🛠️ Tools & Technologies UsedHardware Description Language: VerilogSimulation Engine: Mentor Graphics ModelSimDevelopment Environment: Visual Studio CodeDeveloped by Abdul Samad Khan
+📊 Waveform Verification
+🛠️ Tools & Technologies Used
+Hardware Description Language: Verilog
+
+Simulation Engine: Mentor Graphics ModelSim
+
+Development Environment: Visual Studio Code
+
+Developed by Abdul Samad Khan
